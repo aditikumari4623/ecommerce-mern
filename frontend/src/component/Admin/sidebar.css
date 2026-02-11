@@ -1,0 +1,81 @@
+.sidebar {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  min-width: 200px;
+}
+
+/* Logo wrapper */
+.sidebar > a:first-child {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Logo image */
+.sidebar > a > img {
+  width: 140px;          /* fixed desktop size */
+  height: auto;
+  transition: all 0.5s;
+}
+
+/* Logo hover */
+.sidebar > a > img:hover {
+  filter: drop-shadow(0 0 10px tomato);
+}
+
+/* Sidebar links */
+.sidebar a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.493);
+  font: 200 1rem "Roboto";
+  padding: 1.5rem 2rem;
+  transition: all 0.5s;
+}
+
+.sidebar a:hover {
+  color: tomato;
+  transform: scale(1.05);
+}
+
+/* Icon + text alignment */
+.sidebar a > p {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar a > p > svg {
+  margin-right: 0.5rem;
+}
+
+/* Fix MUI typography background */
+.MuiTypography-root {
+  background-color: #fff !important;
+}
+
+/* ---------------- MOBILE FIX ---------------- */
+
+@media screen and (max-width: 600px) {
+  .sidebar {
+    padding: 1rem 0;
+    min-width: 100%;
+    flex-direction: row;
+    overflow-x: auto;        /* enables horizontal scrolling */
+  }
+
+  .sidebar > a:first-child {
+    width: 100%;
+  }
+
+  .sidebar > a > img {
+    width: 80px;             /* smaller logo for mobile */
+    margin: 0.5rem auto;
+  }
+
+  .sidebar a {
+    padding: 1rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+}

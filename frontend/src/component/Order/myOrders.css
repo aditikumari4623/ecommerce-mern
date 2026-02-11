@@ -1,0 +1,66 @@
+.myOrdersPage {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 2vmax;
+  box-sizing: border-box;
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  flex-direction: column;
+}
+
+#myOrdersHeading {
+  text-align: center;
+  font: 500 1.5vmax "Roboto";
+  padding: 1vmax;
+  color: white;
+  background-color: tomato;
+  margin-bottom: 1vmax;
+}
+
+.myOrdersTableContainer {
+  background-color: white;
+  height: 70vh;          /* 🔥 THIS IS THE KEY FIX */
+  width: 100%;
+}
+
+.MuiDataGrid-root {
+  border: none !important;
+}
+
+.MuiDataGrid-columnHeaders {
+  background-color: tomato;
+  color: white;
+  font-size: 1vmax;
+}
+
+.MuiDataGrid-columnHeaderTitle {
+  font-weight: 600;
+}
+
+.greenColor {
+  color: green !important;
+  font-weight: 600;
+}
+
+.redColor {
+  color: red !important;
+  font-weight: 600;
+}
+
+.MuiDataGrid-cell {
+  font-size: 0.95vmax;
+}
+
+@media screen and (max-width: 600px) {
+  #myOrdersHeading {
+    font-size: 3vmax;
+  }
+
+  .MuiDataGrid-cell {
+    font-size: 3vw;
+  }
+
+  .MuiDataGrid-columnHeaders {
+    font-size: 3vw;
+  }
+}

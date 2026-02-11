@@ -1,0 +1,125 @@
+/* Stop horizontal scroll everywhere */
+body {
+  overflow-x: hidden;
+}
+
+/* Main wrapper */
+.newProductContainer {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Main order page grid */
+.confirmOrderPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .confirmOrderPage {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Both columns */
+.confirmOrderPage > div {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Left area */
+.confirmshippingArea,
+.confirmCartItems {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Cart container */
+.confirmCartItemsContainer {
+  max-height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Cart item row */
+.confirmCartItemsContainer > div {
+  display: grid;
+  grid-template-columns: 50px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+/* Image */
+.confirmCartItemsContainer img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+/* Product link */
+.confirmCartItemsContainer a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+/* Price */
+.confirmCartItemsContainer span {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Update form */
+.updateOrderForm {
+  background-color: white;
+  padding: 2vmax;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Select input */
+.updateOrderForm > div {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.updateOrderForm > div > select {
+  width: 100%;
+  padding: 1vmax 4vmax;
+  box-sizing: border-box;
+}
+
+/* Icon */
+.updateOrderForm > div > svg {
+  position: absolute;
+  left: 1vmax;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Button */
+#createProductBtn {
+  width: 100%;
+}

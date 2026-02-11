@@ -1,0 +1,89 @@
+.productReviewsContainer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  min-height: 100vh;     /* 🔥 not height */
+  padding: 1rem;
+}
+
+/* FORM */
+.productReviewsForm {
+  width: 100%;
+  max-width: 22rem;     /* responsive width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.productReviewsFormHeading {
+  color: rgba(0, 0, 0, 0.733);
+  font: 400 1.6rem "Roboto";
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.productReviewsForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.productReviewsForm > div > input {
+  padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 4px;
+  font: 400 0.9rem "Roboto";
+  outline: none;
+}
+
+.productReviewsForm > div > svg {
+  position: absolute;
+  left: 0.6rem;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.623);
+  pointer-events: none;
+}
+
+/* DataGrid */
+.productListTable {
+  background-color: white;
+  margin-top: 2rem;
+  border-radius: 6px;
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .productReviewsContainer {
+    border-left: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.158);
+    padding: 0.5rem;
+  }
+
+  .productReviewsForm {
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+
+  .productReviewsFormHeading {
+    font-size: 1.3rem;
+  }
+
+  .productReviewsForm > div > input {
+    font-size: 1rem;
+    padding: 0.9rem 0.9rem 0.9rem 2.5rem;
+  }
+
+  .productReviewsForm > div > svg {
+    font-size: 1.4rem;
+  }
+}

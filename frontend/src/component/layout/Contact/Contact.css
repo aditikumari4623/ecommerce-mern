@@ -1,0 +1,31 @@
+.contactContainer {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: white;
+  position: fixed;
+}
+
+/* Animation wrapper */
+.mailBtn {
+  text-decoration: none;
+  transform: translateX(-100vw);
+  animation: mailBtnAnimation 2s forwards;
+}
+
+/* Target MUI Button properly */
+.mailBtn .MuiButton-root {
+  font: 300 2vmax "Roboto";
+  cursor: url("https://img.icons8.com/color/48/000000/edit--v2.png"), pointer;
+  padding: 1.5vmax 3vmax;
+  text-transform: none;
+}
+
+/* Animation */
+@keyframes mailBtnAnimation {
+  to {
+    transform: translateX(0);
+  }
+}
